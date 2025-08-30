@@ -1,0 +1,113 @@
+:root {
+    --bg-color: #0d1117;
+    --text-color: #e6e6e6;
+    --accent-color: #38b48b;
+    --border-color: #2e353f;
+    --card-bg: #161b22;
+    --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3 {
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+p { margin-bottom: 1em; }
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+}
+
+/* Layout & Spacing */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.content-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.card-container {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.primary-cta {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+.primary-cta:hover, .primary-cta:focus {
+    background-color: #31a07d;
+    text-decoration: none;
+}
+
+.secondary-cta {
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    background: transparent;
+}
+
+.secondary-cta:hover, .secondary-cta:focus {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    text-decoration: none;
+}
+
+.submit-button {
+    display
